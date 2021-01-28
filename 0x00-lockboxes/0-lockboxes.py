@@ -14,9 +14,12 @@ def canUnlockAll(boxes):
             for open_box in boxes[key]:
                 if open_box not in key_chain:
                     key_chain.append(open_box)
-        except:
+        except error:
             continue
-    if len(key_chain) == len(boxes):
-        return True
-    else:
+    try:
+        if len(key_chain) == len(boxes):
+            return True
+        else:
+            return False
+    except error:
         return False
