@@ -16,10 +16,7 @@ def canUnlockAll(boxes):
                     key_chain.append(open_box)
         except error:
             continue
-    try:
-        if len(key_chain) == len(boxes):
-            return True
-        else:
-            return False
-    except error:
+    if len(key_chain) == len(boxes):
+        return True
+    else:
         return False
