@@ -5,12 +5,10 @@
 def canUnlockAll(boxes):
     """
     INPUT a list of boxes with it's keys
-    OUTPUT true if every box can be open flase otherwise
+    OUTPUT true if every box can be open false otherwise
     """
-    if (len(boxes) == 0 or type(boxes) is not list):
-        return False
-    key_chain = list()
-    key_chain.append(0)
+
+    key_chain = [0]
     for key in key_chain:
         if key < len(boxes):
             for open_box in boxes[key]:
