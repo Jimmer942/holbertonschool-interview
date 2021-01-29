@@ -7,6 +7,8 @@ def canUnlockAll(boxes):
     INPUT a list of boxes with it's keys
     OUTPUT true if every box can be open false otherwise
     """
+    if len(boxes) == 0:
+        return False
 
     key_chain = [0]
     for key in key_chain:
