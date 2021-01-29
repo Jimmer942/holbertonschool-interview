@@ -20,4 +20,3 @@ def canUnlockAll(boxes):
         return True
     else:
         return False
-print(canUnlockAll([[1]]))
