@@ -1,6 +1,6 @@
 #include "menger.h"
 /**
- * character - # or blank space
+ * character - numeral or blank space
  * @row: row.
  * @col: col.
  * Return: # or blank space
