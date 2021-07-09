@@ -1,2 +1,1 @@
-# README
-Sponge in 2D!
+# 0x0B. Menger sponge
