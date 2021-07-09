@@ -2,43 +2,43 @@
 #include "menger.h"
 
 /**
- * empty - Checks if square is blank
+ * character - next character
  *
- * @i: row idx
- * @j: column idx
+ * @row: row
+ * @col: col
  *
- * Return: 1 if # 0 if blank
+ * Return: 1 to # or 0 to blank
  */
 
-int empty(int i, int j)
+int character(int row, int col)
 {
-	while (i != 0 && j != 0)
+	while (row != 0 && col != 0)
 	{
-		if (i % 3 == 1 && j % 3 == 1)
+		if (row % 3 == 1 && col % 3 == 1)
 			return (0);
-		i /= 3;
-		j /= 3;
+		row /= 3;
+		col /= 3;
 	}
 	return (1);
 }
 
 /**
- * menger - Draws a 2D Menger Sponge
+ * menger - Draws an Sponge
  *
- * @level: level of the Menger Sponge to draw
+ * @level: level
  */
 
 void menger(int level)
 {
-	int i, j, max;
+	int row, col, size;
 
 	if (level < 0)
 		return;
 
-	for (i = 0, max = pow(3, level); i < max; i++)
+	for (row = 0, size = pow(3, level); row < size; row++)
 	{
-		for (j = 0; j < max; j++)
-			if (empty(i, j) == 1)
+		for (col = 0; col < size; col++)
+			if (character(row, col) == 1)
 				printf("#");
 			else
 				printf(" ");
