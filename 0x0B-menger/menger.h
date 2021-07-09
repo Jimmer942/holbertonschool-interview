@@ -1,10 +1,9 @@
-#ifndef SPONGE_H
-#define SPONGE_H
+#ifndef MERGER_H
+#define MERGER_H
 
 #include <stdio.h>
 #include <math.h>
 
 void menger(int level);
-char character(int row, int col);
 
-#endif /*SPONGE_H*/
+#endif /*MERGER_H*/
